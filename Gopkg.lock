@@ -86,9 +86,12 @@
   revision = "2485387d6ede89c1c8c3445cd1935fd41a2e9ee9"
 
 [[projects]]
-  digest = "1:4601a92f47cf05e20c12fbe926076d7d0900f08c0025ad13a4ea165fd6944273"
+  digest = "1:a2ed23cfd27b06924e42c08dbf8e738103e88f3c144b6bdef85c62b7c753a350"
   name = "github.com/nats-io/go-nats-streaming"
-  packages = ["pb"]
+  packages = [
+    ".",
+    "pb",
+  ]
   pruneopts = "UT"
   revision = "c6a960c17758f63fdbbb01d26f77f28e501b528c"
 
@@ -144,6 +147,9 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  input-imports = ["github.com/nats-io/nats-streaming-server/server"]
+  input-imports = [
+    "github.com/nats-io/go-nats-streaming",
+    "github.com/nats-io/nats-streaming-server/server",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
